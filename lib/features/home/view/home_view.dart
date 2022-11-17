@@ -1,5 +1,6 @@
 import 'package:exercise_app/core/extension/double_extension.dart';
 import 'package:exercise_app/core/extension/ui_extension.dart';
+import 'package:exercise_app/core/extension/string_extension.dart';
 import 'package:exercise_app/core/utils/emoji_block.dart';
 import 'package:exercise_app/features/home/widget/custom_listtile_widget.dart';
 import 'package:exercise_app/features/home/widget/excercise_icon_widget.dart';
@@ -95,26 +96,25 @@ class _HomeViewState extends State<HomeView> {
 
   Expanded searchTextField() {
     return Expanded(
-                        child: SizedBox(
-                          height: 40,
-                          child: CustomTextField(
-                            controller: _seacrhController,
-                            hintText: 'Search',
-                            onChanged: (_) => getExercise(),
-                            icon: const Padding(
-                              padding: EdgeInsets.symmetric(horizontal: 8.0),
-                              child: Icon(
-                                Icons.search,
-                                color: Colors.black54,
-                              ),
-                            ),
-                            inputFormatters: [
-                              FilteringTextInputFormatter.deny(
-                                  RegExp(emojiDeny)),
-                            ],
-                          ),
-                        ),
-                      );
+      child: SizedBox(
+        height: 40,
+        child: CustomTextField(
+          controller: _seacrhController,
+          hintText: 'Search',
+          onChanged: (_) => getExercise(),
+          icon: const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            child: Icon(
+              Icons.search,
+              color: Colors.black54,
+            ),
+          ),
+          inputFormatters: [
+            FilteringTextInputFormatter.deny(RegExp(emojiDeny)),
+          ],
+        ),
+      ),
+    );
   }
 
   SliverList _sliverList(ExerciseState state) {
