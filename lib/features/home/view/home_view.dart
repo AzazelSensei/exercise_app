@@ -1,6 +1,5 @@
 import 'package:exercise_app/core/extension/double_extension.dart';
 import 'package:exercise_app/core/extension/ui_extension.dart';
-import 'package:exercise_app/core/extension/string_extension.dart';
 import 'package:exercise_app/core/utils/emoji_block.dart';
 import 'package:exercise_app/features/home/widget/custom_listtile_widget.dart';
 import 'package:exercise_app/features/home/widget/excercise_icon_widget.dart';
@@ -131,7 +130,7 @@ class _HomeViewState extends State<HomeView> {
             child: CustomListTile(
               leading: Column(
                 children: [
-                  ExcerciseIcon(name: state.exercises[index].type.toString()),
+                  ExcerciseIcon(name: state.exercises[index].type),
                   0.07.space,
                   Chip(
                     label: SizedBox(

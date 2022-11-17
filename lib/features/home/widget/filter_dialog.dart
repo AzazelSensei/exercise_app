@@ -43,16 +43,15 @@ class _FfiltreDiaerDialogBody extends State<_FilterDialogBody> {
               0.05.space,
               TypeChipWidget(
                 exerciseBloc: _exerciseBloc,
-                bgColorType: state.exerciseType,
-                muscle: state.exerciseMuscle,
+                state: state,
               ),
               0.07.space,
               'Muscle Type'.text.clone(Colors.black, FontWeight.bold, 20),
               0.05.space,
               MuscleChipWidget(
-                  exerciseBloc: _exerciseBloc,
-                  bgColorState: state.exerciseMuscle,
-                  type: state.exerciseType),
+                exerciseBloc: _exerciseBloc,
+                state: state,
+              ),
               0.07.space,
               CustomButton(
                   color: Colors.deepPurple[400],

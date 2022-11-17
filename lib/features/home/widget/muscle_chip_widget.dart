@@ -6,16 +6,12 @@ class MuscleChipWidget extends StatelessWidget {
   const MuscleChipWidget({
     Key? key,
     required ExerciseBloc exerciseBloc,
-    this.type,
-    this.bgColorState,
-    this.muscle,
+    required this.state,
   })  : _exerciseBloc = exerciseBloc,
         super(key: key);
 
   final ExerciseBloc _exerciseBloc;
-  final dynamic type;
-  final dynamic muscle;
-  final dynamic bgColorState;
+  final ExerciseState state;
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +21,7 @@ class MuscleChipWidget extends StatelessWidget {
         (index) => GestureDetector(
           onTap: () {
             _exerciseBloc.add(ChangeFilter(
-              type: /*state.exerciseType*/ type,
+              type: state.exerciseType,
               muscle: ExerciseMuscle.values[index],
             ));
           },
@@ -36,14 +32,14 @@ class MuscleChipWidget extends StatelessWidget {
                 color: Colors.white,
                 fontSize: 16,
               ),
-              backgroundColor: /*state.exerciseMuscle*/ bgColorState ==
-                      ExerciseMuscle.values[index]
-                  ? Colors.deepPurple
-                  : Colors.black12,
+              backgroundColor:
+                  state.exerciseMuscle == ExerciseMuscle.values[index]
+                      ? Colors.deepPurple
+                      : Colors.black12,
               label: Text(
                 ExerciseMuscle.values[index].name.toUpperCase(),
                 style: TextStyle(
-                    color: bgColorState == ExerciseMuscle.values[index]
+                    color: state.exerciseMuscle == ExerciseMuscle.values[index]
                         ? Colors.white
                         : Colors.black),
               ),

@@ -6,14 +6,12 @@ class TypeChipWidget extends StatelessWidget {
   const TypeChipWidget({
     Key? key,
     required ExerciseBloc exerciseBloc,
-    required this.muscle,
-    required this.bgColorType,
+    required this.state,
   })  : _exerciseBloc = exerciseBloc,
         super(key: key);
 
   final ExerciseBloc _exerciseBloc;
-  final dynamic muscle;
-  final dynamic bgColorType;
+  final ExerciseState state;
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +22,7 @@ class TypeChipWidget extends StatelessWidget {
           onTap: () {
             _exerciseBloc.add(ChangeFilter(
               type: ExerciseType.values[index],
-              muscle: /*state.exerciseMuscle*/ muscle,
+              muscle: state.exerciseMuscle,
             ));
           },
           child: Padding(
@@ -34,14 +32,13 @@ class TypeChipWidget extends StatelessWidget {
                 color: Colors.white,
                 fontSize: 16,
               ),
-              backgroundColor: /*state.exerciseType*/ bgColorType ==
-                      ExerciseType.values[index]
+              backgroundColor: state.exerciseType == ExerciseType.values[index]
                   ? Colors.deepPurple
                   : Colors.black12,
               label: Text(
                 ExerciseType.values[index].name.toUpperCase(),
                 style: TextStyle(
-                    color: bgColorType == ExerciseType.values[index]
+                    color: state.exerciseType == ExerciseType.values[index]
                         ? Colors.white
                         : Colors.black),
               ),
