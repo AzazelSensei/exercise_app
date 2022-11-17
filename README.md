@@ -1,16 +1,11 @@
-# exercise_app
+# Exercise App
 
-A new Flutter project.
+Developed for study case.
 
-## Getting Started
+# Release Link
 
-This project is a starting point for a Flutter application.
+https://github.com/AzazelSensei/exercise_app/blob/master/app-release.apk
 
-A few resources to get you started if this is your first Flutter project:
+## Presentation
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<img src="https://user-images.githubusercontent.com/89297042/202461571-6359ca3a-12ef-4c08-824b-54dcaa3f3dfc.png" width="250"><img src="https://user-images.githubusercontent.com/89297042/202461602-615858eb-01bd-4cdc-bb72-63af2d159398.png" width="250"><img src="https://user-images.githubusercontent.com/89297042/202461698-4766df9e-a8f6-4091-9cc5-66e68c38627f.png" width="250"><img src="https://user-images.githubusercontent.com/89297042/202461721-6d55b1a3-563e-4746-9f34-077bfad94a66.png" width="250">
